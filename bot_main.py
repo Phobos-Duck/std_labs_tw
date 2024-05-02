@@ -13,7 +13,6 @@ import api_joke
 logging.basicConfig(level=logging.DEBUG)
 token = get_token('NF_TOKEN')
 api_n = get_token('NW_TOKEN')
-api_j = get_token('JS_TOKEN')
 bot = AsyncTeleBot(token)
 current_state = 0
 other_state = 0
