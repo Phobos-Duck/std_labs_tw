@@ -129,7 +129,7 @@ async def stop(message):
 async def settings(message):
     global cmd
     user_id = message.from_user.id
-    await bot.send_message(message.chat.id, "Хорошо! Вы хотите установить конкретный пунтк или сразу оба(город и категорию)?", reply_markup=keyboards.keyboard_setting())
+    await bot.send_message(message.chat.id, "Хорошо! Вы хотите установить конкретный пункт или сразу оба(город и категорию)?", reply_markup=keyboards.keyboard_setting())
     cmd = Statecommand.settings
     await add_cmd(cmd, user_id)
 
@@ -193,7 +193,6 @@ async def only_ca(message):
     await bot.send_message(message.chat.id, "Отлично! Я запомнил ваш выбор)", reply_markup=keyboards.make_keyboard())
     current_state = 0
     other_state = 0
-
 
 
 @bot.message_handler(commands=["joke"])
